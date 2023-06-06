@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2,
+input,
+button,
+h3,
+p {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body {
+  min-height: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.loader-container {
+  width: 100vw;
+  height: 100vh;
+  animation: opening 3s ease forwards;
+  z-index: 5;
+}
+.loader-container .curtain {
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 100vw;
+  min-height: 100vh;
+  opacity: 0;
+  z-index: 6;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.loader-container .curtain .logo-container {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 7;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.loader-container .curtain .logo-container .logo {
+  overflow: hidden;
+  transform: perspective(1000px) rotateX(45deg);
+}
+.loader-container .curtain .logo-container .sos {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 22vh;
+  left: 20vw;
+  z-index: 20;
+}
+.loader-container .curtain .logo-container .top-gun {
+  display: none;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 72vh;
+  right: 20vw;
+  z-index: 20;
+}
+.loader-container .curtain .logo-container .apes-window {
+  display: none;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 23vh;
+  left: 12vw;
+  z-index: 20;
+}
+.loader-container .curtain .curtain-left {
+  min-height: 100vh;
+  width: 50%;
+  background-color: #E50914;
+  animation: curtain-left 3s ease-in-out forwards;
+}
+.loader-container .curtain .curtain-right {
+  min-height: 100vh;
+  width: 50%;
+  background-color: #E50914;
+  animation: curtain-right 3s ease-in-out forwards;
+}
+
+.home-container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.home-container header {
+  display: flex;
+  min-width: 100vw;
+  height: 68px;
+  z-index: 5;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-container header nav {
+  min-width: 100vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+}
+.home-container header nav .logo {
+  margin-left: 15px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-container header nav .details-hamburger-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.home-container header nav .details {
+  width: 50px;
+  height: 50px;
+  background: url(./ressources/nav.svg) center center no-repeat;
+}
+.home-container header nav .hamburger {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin-right: 15px;
+}
+.home-container header nav .hamburger .upper {
+  width: 25px;
+  height: 1px;
+  position: absolute;
+  top: 33%;
+  background-color: white;
+  transition: 0.5s ease;
+}
+.home-container header nav .hamburger .upper-active {
+  top: 50%;
+  transform: rotate(45deg);
+  transition: 0.5s ease;
+}
+.home-container header nav .hamburger .middle {
+  width: 25px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+.home-container header nav .hamburger .middle-active {
+  opacity: 0;
+  width: 0;
+  transition: all 0.5s ease;
+}
+.home-container header nav .hamburger .lower {
+  width: 25px;
+  height: 1px;
+  position: absolute;
+  top: 66%;
+  background-color: white;
+  transition: 0.5s ease;
+}
+.home-container header nav .hamburger .lower-active {
+  top: 50%;
+  transform: rotate(-45deg);
+  transition: 0.5s ease;
+}
+.home-container .secondary-div {
+  display: flex;
+  flex-direction: column;
+  background-image: url(./ressources/john-wick.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin-top: -70px;
+}
+.home-container .secondary-div .bande-annonce-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-left: 15px;
+  margin-top: 85vh;
+  margin-bottom: 50px;
+}
+.home-container .secondary-div .bande-annonce-container .movie-title {
+  color: white;
+  width: 80%;
+  font-size: 45px;
+  line-height: 48px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.home-container .secondary-div .bande-annonce-container .bande-annonce-button-container {
+  display: flex;
+  width: 90%;
+  max-width: 346px;
+  min-width: 320px;
+  height: 58px;
+  margin: 20px 0;
+  border-radius: 4px;
+  border: none;
+  font-size: 23px;
+  line-height: 35px;
+  color: black;
+  background-color: white;
+}
+.home-container .secondary-div .bande-annonce-container .bande-annonce-button-container .bande-annonce {
+  width: 100%;
+  height: 58px;
+  background-color: white;
+  border-radius: 4px;
+  border: none;
+  font-size: 23px;
+  line-height: 35px;
+  color: black;
+}
+.home-container .secondary-div .bande-annonce-container .bande-annonce-button-container .play-bande-annonce {
+  margin-left: 22px;
+}
+.home-container .secondary-div .infos {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(109, 109, 110, 0.7137254902);
+  border-radius: 4px;
+  width: 55vw;
+  max-width: 236px;
+  min-width: 200px;
+  height: 60px;
+  justify-content: space-between;
+}
+.home-container .secondary-div .infos .infos-txt {
+  margin-right: 35px;
+  color: white;
+}
+.home-container .secondary-div .infos .infos-image {
+  width: 32px;
+  height: 32px;
+  margin-left: 30px;
+}
+.home-container .movies-to-find {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 900;
+}
+.home-container .movies-to-find h3 {
+  margin: 0 auto;
+  width: 100%;
+}
+.home-container .first-section {
+  margin-top: -21px;
+}
+.home-container .first-section .images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.home-container .first-section .images-container .movie {
+  filter: grayscale(100%);
+  width: 28vw;
+  height: 35vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.home-container .first-section .images-container .gladiator {
+  background-image: url(./ressources/movies/gladiator.webp);
+}
+.home-container .first-section .images-container .schindler {
+  background-image: url(./ressources/movies/featured_la-liste-de-schindler.jpg);
+}
+.home-container .first-section .images-container .dreamcatcher {
+  background-image: url(./ressources/movies/dreamcatcher.jpg);
+}
+.home-container .second-section .images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.home-container .second-section .images-container .movie {
+  filter: grayscale(100%);
+  width: 28vw;
+  height: 35vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.home-container .second-section .images-container .hot-shots {
+  background-image: url(./ressources/movies/hotshot.jpg);
+}
+.home-container .second-section .images-container .minority-report {
+  background-image: url(./ressources/movies/minority-report.png);
+}
+.home-container .second-section .images-container .alien-covenant {
+  background-image: url(./ressources/movies/alien-covenant.jpeg);
+}
+
+@keyframes opening {
+  100% {
+    background-color: white;
+  }
+}
+@keyframes curtain-right {
+  25% {
+    border-radius: 0 0 0 13%;
+  }
+  50% {
+    border-radius: 7px 0 0 26%;
+  }
+  75% {
+    border-radius: 14px 0 0 60%;
+  }
+  100% {
+    border-radius: 20px 0 0 99%;
+  }
+}
+@keyframes curtain-left {
+  25% {
+    border-radius: 0 0 13% 0;
+  }
+  50% {
+    border-radius: 0 7px 26% 0;
+  }
+  75% {
+    border-radius: 0 14px 60% 0;
+  }
+  100% {
+    border-radius: 0 20px 99% 0;
+  }
+}/*# sourceMappingURL=style.css.map */
