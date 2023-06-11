@@ -1,0 +1,41 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2,
+input,
+button,
+h3,
+p {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+label {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    z-index: 40;
+}
+
+a {
+    padding-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    line-height: 17px;
+    color: white;
+}
+
+body {
+    min-height: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+}

@@ -70,26 +70,153 @@
 // setTimeout(() => imageOpacityIncreaser(topGun), 8030)
 // setTimeout(() => imageOpacityDecreaser(topGun), 9030)
 
+// const swiper = new Swiper('.swiper', {
+//     speed: 400,
+//     spaceBetween: 100,
+// });
+
+// const swiper = document.querySelector('.swiper').swiper;
 //******************************* HOME PAGE ****************************************/
 
+const header = document.querySelector('header');
+const mobileMenu = document.querySelector('.mobile-menu')
 const hamburger = document.querySelector('.hamburger');
 const upperHam = document.querySelector('.upper');
 const middleHam = document.querySelector('.middle');
 const lowerHam = document.querySelector('.lower');
 let mainTitle = document.querySelector('.movie-title');
-let moviesDiv = document.querySelectorAll('.movie');
+let active = false;
 
-//****** GREY FILTER ON ALL IMAGES **************/
 
-moviesDiv.forEach(el => el.style.filter = 'greyscale(100%)')
 //***************************** MES FONCTIONS ************************************ */
 
 function toggleMobileMenu() {
-    hamburger.onclick = function () {
-        middleHam.classList.toggle('middle-active');
-        upperHam.classList.toggle('upper-active');
-        lowerHam.classList.toggle('lower-active');
-    }
+    middleHam.classList.toggle('middle-active');
+    upperHam.classList.toggle('upper-active');
+    lowerHam.classList.toggle('lower-active');
+    mobileMenu.classList.toggle('mobile-menu-active');
+    mobileMenu.style.transition = 'opacity .5s ease';
 }
 
-toggleMobileMenu();
+function toggleDisplayHomePlay() {
+    homeContainer.classList.toggle('home-container-inactive');
+    playContainer.classList.toggle('play-container-active');
+    homePage = false;
+}
+//************************** How to redirect to the Play page in JS ****************/
+
+const homeContainer = document.querySelector('.home-container');
+const playContainer = document.querySelector('.play-container');
+const home = document.querySelectorAll('.accueil');
+const movie = document.querySelectorAll('.movie');
+const gladiator = document.querySelector('.gladiator');
+const schindler = document.querySelector('.schindler');
+const minorityReport = document.querySelector('.minority-report');
+const dreamCatcher = document.querySelector('.dreamcatcher');
+const hotShots = document.querySelector('.hot-shots');
+const alienCovenant = document.querySelector('.alien-covenant');
+const gladiatorRedirect = './index.html'
+const schindlerRedirect = './index.html';
+const minorityReportRedirect = './index.html';
+const dreamCatcherRedirect = './index.html';
+const hotShotsRedirect = './index.html';
+const alienCovenantsRedirect = './index.html';
+let clicked = true;
+let homePage = true;
+const imageClicked = document.querySelector('.image-clicked');
+
+hamburger.onclick = () => toggleMobileMenu();
+
+home.forEach(el => el.onclick = function () {
+    !homePage ? toggleDisplayHomePlay() : console.log('test');
+    homePage = true;
+    toggleMobileMenu();
+})
+
+// **** REDIRECTION AU CLICK SUR UNE NOUVELLE PAGE **** //
+
+// function goTo(div, redirection) {
+//     div.target = '_blank';
+//     window.open(redirection);
+//     // clicked = true;
+// }
+
+// goTo(schindler, schindlerRedirect);
+// goTo(minorityReport, minorityReportRedirect);
+// goTo(dreamCatcher, dreamCatcherRedirect);
+// goTo(alienCovenant, alienCovenantsRedirect);
+
+const apiURL = 'https://api.themoviedb.org/3/movie/550?api_key=0055dcf71eefbef167140b90c31be8fd';
+
+
+
+//************* UTILISATION DE FETCH() POUR EXPLOITER LE JSON ***********/
+
+async function extractDataJson() {
+    const response = await fetch('./movies.JSON');
+    const data = await response.json();
+    console.log(data);
+    gladiator.onclick = function () {
+        imageClicked.src = data.medias.movie[0].picture
+        let movieTitle = data.medias.movie[0].title;
+        console.log(movieTitle);
+        // goTo(gladiator, gladiatorRedirect);
+        toggleDisplayHomePlay();
+        validateAnswer(movieTitle);
+
+    }
+    schindler.onclick = function () {
+        imageClicked.src = data.medias.movie[1].picture;
+        let movieTitle = data.medias.movie[1].title;
+        toggleDisplayHomePlay();
+        validateAnswer(movieTitle);
+    }
+
+    dreamCatcher.onclick = function () {
+        imageClicked.src = data.medias.movie[2].picture;
+        let movieTitle = data.medias.movie[2].title;
+        toggleDisplayHomePlay();
+        validateAnswer(movieTitle);
+    }
+    hotShots.onclick = function () {
+        imageClicked.src = data.medias.movie[3].picture
+        let movieTitle = data.medias.movie[3].title;
+        toggleDisplayHomePlay();
+        validateAnswer(movieTitle);
+    };
+    minorityReport.onclick = function () {
+        imageClicked.src = data.medias.movie[4].picture
+        let movieTitle = data.medias.movie[4].title;
+        toggleDisplayHomePlay();
+        validateAnswer(movieTitle);
+    };
+    alienCovenant.onclick = function () {
+        imageClicked.src = data.medias.movie[5].picture
+        let movieTitle = data.medias.movie[5].title;
+        toggleDisplayHomePlay();
+        validateAnswer(movieTitle);
+    };
+}
+
+extractDataJson();
+
+//********************* Logics Handling *******************//
+const inputHandler = document.querySelector('#user-input');
+const submit = document.querySelector('#submit');
+let userAnswer = inputHandler.value;
+//*** First step : get the user's input ***/
+
+function validateAnswer(movieTitle) {
+    submit.onclick = function () {
+        let userAnswer = inputHandler.value;
+        console.log(userAnswer);
+        if (userAnswer === movieTitle) {
+            console.log('Bravo !');
+        }
+        return userAnswer;
+    }
+
+
+}
+
+

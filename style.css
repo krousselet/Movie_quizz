@@ -1,4 +1,404 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  min-width: 100vw;
+  height: 68px;
+  z-index: 5;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 60;
+}
+header nav {
+  min-width: 100vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+}
+header nav .logo {
+  margin-left: 15px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (width > 799px) and (width < 2047px) {
+  header nav .logo .logo-image {
+    display: none;
+  }
+}
+header nav .logo .logo-image-desktop-container {
+  display: none;
+}
+@media (width > 799px) and (width < 2047px) {
+  header nav .logo .logo-image-desktop-container {
+    display: flex;
+    width: 130px;
+    height: 31px;
+    margin-right: 100px;
+  }
+}
+header nav .logo .logo-image-desktop-container .logo-image-desktop {
+  width: 130px;
+  height: 60px;
+}
+header nav .details-hamburger-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header nav .details-desktop-menu {
+  display: none;
+}
+@media (width > 799px) and (width < 2048px) {
+  header nav .details-desktop-menu {
+    width: 100vw;
+    position: relative;
+    left: 75px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0;
+  }
+}
+header nav .details {
+  width: 50px;
+  height: 50px;
+  background: url(./ressources/nav.svg) center center no-repeat;
+  cursor: pointer;
+}
+header nav .hamburger {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin-right: 15px;
+  cursor: pointer;
+}
+@media (width > 699px) and (width < 2049px) {
+  header nav .hamburger {
+    display: none;
+  }
+}
+header nav .hamburger .upper {
+  width: 25px;
+  height: 1px;
+  position: absolute;
+  top: 33%;
+  background-color: white;
+  transition: 0.5s ease;
+}
+header nav .hamburger .upper-active {
+  top: 50%;
+  transform: rotate(45deg);
+  transition: 0.5s ease;
+}
+header nav .hamburger .middle {
+  width: 25px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+header nav .hamburger .middle-active {
+  opacity: 0;
+  width: 0;
+  transition: all 0.5s ease;
+}
+header nav .hamburger .lower {
+  width: 25px;
+  height: 1px;
+  position: absolute;
+  top: 66%;
+  background-color: white;
+  transition: 0.5s ease;
+}
+header nav .hamburger .lower-active {
+  top: 50%;
+  transform: rotate(-45deg);
+  transition: 0.5s ease;
+}
+
+.home-container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container-inactive {
+  display: none;
+}
+
+.mobile-menu {
+  opacity: 0;
+  position: absolute;
+  top: 100px;
+  position: absolute;
+  z-index: 50;
+  width: 75vw;
+  height: 100px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mobile-menu-active {
+  opacity: 1;
+  z-index: 50;
+  width: 75vw;
+  height: 100px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.secondary-div {
+  display: flex;
+  flex-direction: column;
+  background-image: url(./ressources/john-wick.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin-top: -90px;
+}
+.secondary-div .bande-annonce-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-left: 15px;
+  margin-top: 85vh;
+  margin-bottom: 50px;
+}
+.secondary-div .bande-annonce-container .movie-title {
+  color: white;
+  width: 80%;
+  font-size: 45px;
+  line-height: 48px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.secondary-div .bande-annonce-container .bande-annonce-button-container {
+  display: flex;
+  width: 90%;
+  max-width: 346px;
+  min-width: 320px;
+  height: 58px;
+  margin: 20px 0;
+  border-radius: 4px;
+  border: none;
+  font-size: 23px;
+  line-height: 35px;
+  color: black;
+  background-color: white;
+}
+.secondary-div .bande-annonce-container .bande-annonce-button-container .bande-annonce {
+  width: 100%;
+  height: 58px;
+  background-color: white;
+  border-radius: 4px;
+  border: none;
+  font-size: 23px;
+  line-height: 35px;
+  color: black;
+  cursor: pointer;
+}
+.secondary-div .bande-annonce-container .bande-annonce-button-container .play-bande-annonce {
+  margin-left: 22px;
+}
+.secondary-div .infos {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(109, 109, 110, 0.7137254902);
+  border-radius: 4px;
+  width: 55vw;
+  max-width: 236px;
+  min-width: 200px;
+  height: 60px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.secondary-div .infos .infos-txt {
+  margin-right: 35px;
+  color: white;
+}
+.secondary-div .infos .infos-image {
+  width: 32px;
+  height: 32px;
+  margin-left: 30px;
+}
+
+.movies-to-find {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 900;
+}
+.movies-to-find h3 {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@keyframes opening {
+  100% {
+    background-color: white;
+  }
+}
+@keyframes curtain-right {
+  25% {
+    border-radius: 0 0 0 13%;
+  }
+  50% {
+    border-radius: 7px 0 0 26%;
+  }
+  75% {
+    border-radius: 14px 0 0 60%;
+  }
+  100% {
+    border-radius: 20px 0 0 99%;
+  }
+}
+@keyframes curtain-left {
+  25% {
+    border-radius: 0 0 13% 0;
+  }
+  50% {
+    border-radius: 0 7px 26% 0;
+  }
+  75% {
+    border-radius: 0 14px 60% 0;
+  }
+  100% {
+    border-radius: 0 20px 99% 0;
+  }
+}
+.first-section {
+  margin-top: -21px;
+}
+.first-section .images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.first-section .images-container .movie {
+  filter: grayscale(100%);
+  width: 28vw;
+  height: 35vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.first-section .images-container .schindler {
+  background-image: url(./ressources/movies/la-liste-de-schindler.jpg);
+}
+.first-section .images-container .dreamcatcher {
+  background-image: url(./ressources/movies/dreamcatcher.jpg);
+}
+
+.second-section .images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.second-section .images-container .movie {
+  filter: grayscale(100%);
+  width: 28vw;
+  height: 35vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.second-section .images-container .hot-shots {
+  background-image: url(./ressources/movies/hotshot.jpg);
+}
+.second-section .images-container .minority-report {
+  background-image: url(./ressources/movies/minority-report.png);
+}
+.second-section .images-container .alien-covenant {
+  background-image: url(./ressources/movies/alien-covenant.jpeg);
+}
+
+.play-container {
+  display: none;
+}
+
+.play-container-active {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.play-container-active .half-screen-container {
+  height: 50vh;
+  max-height: 50vh;
+  min-width: 100vw;
+}
+.play-container-active .half-screen-container .image-clicked {
+  margin-top: 100px;
+  width: 100%;
+  height: 100%;
+}
+.play-container-active .half-screen-lower {
+  height: 50vh;
+  max-height: 50vh;
+  min-width: 100vw;
+}
+.play-container-active .half-screen-lower .user-answer-container {
+  width: 90%;
+  min-width: 70%;
+  margin: 75px auto;
+}
+.play-container-active .half-screen-lower .user-answer-container #user-input-label {
+  font-weight: 900;
+  font-size: 32px;
+  min-width: 50%;
+}
+.play-container-active .half-screen-lower .user-answer-container #user-input {
+  width: 60vw;
+  min-width: 170px;
+  margin: 0 auto;
+  border: none;
+  opacity: 1;
+  position: relative;
+  color: black;
+}
+.play-container-active .half-screen-lower .user-answer-container .checker {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 25px;
+}
+.play-container-active .half-screen-lower .user-answer-container .checker #submit {
+  color: black;
+}
+.play-container-active .half-screen-lower .user-answer-container .checker #cancel {
+  color: black;
+}
+
 *,
 ::before,
 ::after {
@@ -16,6 +416,21 @@ p {
   color: white;
 }
 
+label {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  z-index: 40;
+}
+
+a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  line-height: 17px;
+  color: white;
+}
+
 body {
   min-height: 100vw;
   min-height: 100vh;
@@ -23,6 +438,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: black;
+  font-family: "Poppins", sans-serif;
 }
 
 .loader-container {
@@ -94,230 +510,17 @@ body {
   animation: curtain-right 3s ease-in-out forwards;
 }
 
-.home-container {
-  min-width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.half-screen-container {
+  min-height: 50vh;
+  min-width: 50vh;
+  margin-top: -100px;
 }
-.home-container header {
-  display: flex;
-  min-width: 100vw;
-  height: 68px;
-  z-index: 5;
-  align-items: center;
-  justify-content: space-between;
-}
-.home-container header nav {
-  min-width: 100vw;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 5;
-}
-.home-container header nav .logo {
-  margin-left: 15px;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.home-container header nav .details-hamburger-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.home-container header nav .details {
-  width: 50px;
-  height: 50px;
-  background: url(./ressources/nav.svg) center center no-repeat;
-}
-.home-container header nav .hamburger {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  margin-right: 15px;
-}
-.home-container header nav .hamburger .upper {
-  width: 25px;
-  height: 1px;
-  position: absolute;
-  top: 33%;
-  background-color: white;
-  transition: 0.5s ease;
-}
-.home-container header nav .hamburger .upper-active {
-  top: 50%;
-  transform: rotate(45deg);
-  transition: 0.5s ease;
-}
-.home-container header nav .hamburger .middle {
-  width: 25px;
-  height: 1px;
-  position: absolute;
-  top: 50%;
-  background-color: white;
-  transition: all 0.5s ease;
-}
-.home-container header nav .hamburger .middle-active {
-  opacity: 0;
-  width: 0;
-  transition: all 0.5s ease;
-}
-.home-container header nav .hamburger .lower {
-  width: 25px;
-  height: 1px;
-  position: absolute;
-  top: 66%;
-  background-color: white;
-  transition: 0.5s ease;
-}
-.home-container header nav .hamburger .lower-active {
-  top: 50%;
-  transform: rotate(-45deg);
-  transition: 0.5s ease;
-}
-.home-container .secondary-div {
-  display: flex;
-  flex-direction: column;
-  background-image: url(./ressources/john-wick.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  min-width: 100vw;
-  margin-top: -70px;
-}
-.home-container .secondary-div .bande-annonce-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  margin-left: 15px;
-  margin-top: 85vh;
-  margin-bottom: 50px;
-}
-.home-container .secondary-div .bande-annonce-container .movie-title {
-  color: white;
-  width: 80%;
-  font-size: 45px;
-  line-height: 48px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-.home-container .secondary-div .bande-annonce-container .bande-annonce-button-container {
-  display: flex;
-  width: 90%;
-  max-width: 346px;
-  min-width: 320px;
-  height: 58px;
-  margin: 20px 0;
-  border-radius: 4px;
-  border: none;
-  font-size: 23px;
-  line-height: 35px;
-  color: black;
-  background-color: white;
-}
-.home-container .secondary-div .bande-annonce-container .bande-annonce-button-container .bande-annonce {
-  width: 100%;
-  height: 58px;
-  background-color: white;
-  border-radius: 4px;
-  border: none;
-  font-size: 23px;
-  line-height: 35px;
-  color: black;
-}
-.home-container .secondary-div .bande-annonce-container .bande-annonce-button-container .play-bande-annonce {
-  margin-left: 22px;
-}
-.home-container .secondary-div .infos {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(109, 109, 110, 0.7137254902);
-  border-radius: 4px;
-  width: 55vw;
-  max-width: 236px;
-  min-width: 200px;
-  height: 60px;
-  justify-content: space-between;
-}
-.home-container .secondary-div .infos .infos-txt {
-  margin-right: 35px;
-  color: white;
-}
-.home-container .secondary-div .infos .infos-image {
-  width: 32px;
-  height: 32px;
-  margin-left: 30px;
-}
-.home-container .movies-to-find {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: center;
-  text-align: center;
-  font-size: 25px;
-  font-weight: 900;
-}
-.home-container .movies-to-find h3 {
-  margin: 0 auto;
-  width: 100%;
-}
-.home-container .first-section {
-  margin-top: -21px;
-}
-.home-container .first-section .images-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-}
-.home-container .first-section .images-container .movie {
-  filter: grayscale(100%);
-  width: 28vw;
-  height: 35vh;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-.home-container .first-section .images-container .gladiator {
+.half-screen-container .image-clicked {
+  width: 100vw;
+  height: 100vh;
   background-image: url(./ressources/movies/gladiator.webp);
-}
-.home-container .first-section .images-container .schindler {
-  background-image: url(./ressources/movies/featured_la-liste-de-schindler.jpg);
-}
-.home-container .first-section .images-container .dreamcatcher {
-  background-image: url(./ressources/movies/dreamcatcher.jpg);
-}
-.home-container .second-section .images-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-}
-.home-container .second-section .images-container .movie {
-  filter: grayscale(100%);
-  width: 28vw;
-  height: 35vh;
-  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-}
-.home-container .second-section .images-container .hot-shots {
-  background-image: url(./ressources/movies/hotshot.jpg);
-}
-.home-container .second-section .images-container .minority-report {
-  background-image: url(./ressources/movies/minority-report.png);
-}
-.home-container .second-section .images-container .alien-covenant {
-  background-image: url(./ressources/movies/alien-covenant.jpeg);
 }
 
 @keyframes opening {
@@ -352,4 +555,6 @@ body {
   100% {
     border-radius: 0 20px 99% 0;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

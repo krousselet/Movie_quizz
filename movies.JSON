@@ -1,0 +1,36 @@
+{
+    "medias": {
+        "movie": [
+            {
+                "title": "Gladiator",
+                "picture": "./ressources/movies/gladiator.webp"
+            },
+            {
+                "title": "La liste de Schindler",
+                "picture": "./ressources/movies/la-liste-de-schindler.jpg"
+            },
+            {
+                "title": "Dreamcatcher",
+                "picture": "./ressources/movies/dreamcatcher.jpg"
+            },
+            {
+                "title": "Hot Shots",
+                "picture": "./ressources/movies/hotshot.jpg"
+            },
+            {
+                "title": "Minority Report",
+                "picture": "./ressources/movies/minority-report.png"
+            },
+            {
+                "title": "Alien Covenant",
+                "picture": "./ressources/movies/alien-covenant.jpeg"
+            }
+        ],
+        "series": [
+            {
+                "title": "FRIENDS",
+                "picture": ""
+            }
+        ]
+    }
+}

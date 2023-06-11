@@ -1,0 +1,67 @@
+.play-container {
+    display: none;
+}
+
+.play-container-active {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .half-screen-container {
+        height: 50vh;
+        max-height: 50vh;
+        min-width: 100vw;
+
+        .image-clicked {
+            margin-top: 100px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .half-screen-lower {
+        height: 50vh;
+        max-height: 50vh;
+        min-width: 100vw;
+
+        .user-answer-container {
+            width: 90%;
+            min-width: 70%;
+            margin: 75px auto;
+
+            #user-input-label {
+                font-weight: 900;
+                font-size: 32px;
+                min-width: 50%;
+            }
+
+            #user-input {
+                width: 60vw;
+                min-width: 170px;
+                margin: 0 auto;
+                border: none;
+                opacity: 1;
+                position: relative;
+                color: black;
+            }
+
+            .checker {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 25px;
+
+                #submit {
+                    color: black;
+                }
+
+                #cancel {
+                    color: black;
+                }
+            }
+        }
+
+
+    }
+}

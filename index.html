@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Movie Quizz est une web application qui permet de s'amuser à deviner des titres et obtenir des informations sur ceux-ci">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="icon" href="./ressources/logo-mini.svg" type="image/x-icon">
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <script defer src="./app.js"></script>
     <title>Loader</title>
@@ -24,22 +28,40 @@
             <div class="curtain-right"></div>
         </div>
     </div> -->
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img class="logo-image" src="./ressources/logo-mini.svg" alt="Logo Movie-quizz">
+            </div>
+            <div class="details-hamburger-container">
+                <div class="details"></div>
+                <div class="hamburger">
+                    <div class="upper"></div>
+                    <div class="middle"></div>
+                    <div class="lower"></div>
+                </div>
+
+            </div>
+            <div class="details-desktop-menu">
+                <div class="logo-image-desktop-container">
+                    <img class="logo-image-desktop" src="./ressources/logo_moviequiz.png" alt="Logo Movie-quizz">
+                </div>
+                <a href="#" class="accueil">Accueil</a>
+                <a href="#" class="series">Séries</a>
+                <a href="#" class="movies">Films</a>
+                <a href="#" class="all">Tous les films et séries</a>
+            </div>
+        </nav>
+    </header>
+    <div class="mobile-menu">
+        <a href="#" class="accueil">Accueil</a>
+        <a href="#" class="series">Séries</a>
+        <a href="#" class="movies">Films</a>
+        <a href="#d" class="all">Tous les films et séries</a>
+    </div>
     <div class="home-container">
-        <header>
-            <nav>
-                <div class="logo">
-                    <img class="logo-image" src="./ressources/logo-mini.svg" alt="">
-                </div>
-                <div class="details-hamburger-container">
-                    <div class="details"></div>
-                    <div class="hamburger">
-                        <div class="upper"></div>
-                        <div class="middle"></div>
-                        <div class="lower"></div>
-                    </div>
-                </div>
-            </nav>
-        </header>
+
         <div class="secondary-div">
 
             <div class="bande-annonce-container">
@@ -59,17 +81,21 @@
         <section class="movies-to-find first-section">
             <h3>Les Films - A trouver</h3>
             <div class="images-container">
-                <div class="gladiator movie"></div>
-                <div class="schindler movie"></div>
-                <div class="dreamcatcher movie"></div>
+                <img src="./ressources/movies/gladiator.webp" class="gladiator movie" alt="Affiche du film Gladiator">
+                <img src="./ressources/movies/la-liste-de-schindler.jpg" class="schindler movie"
+                    alt="Affiche du film la liste de Schindler">
+                <img src="./ressources/movies/dreamcatcher.jpg" class="dreamcatcher movie"
+                    alt="Affiche du film Dreamcatcher">
             </div>
         </section>
         <section class="movies-to-find second-section">
             <h3>Les Films - A trouver</h3>
             <div class="images-container">
-                <div class="hot-shots movie"></div>
-                <div class="minority-report movie"></div>
-                <div class="alien-covenant movie"></div>
+                <img src="./ressources/movies/hotshot.jpg" class="hot-shots movie" alt="Affiche du film Hot Shots">
+                <img src="./ressources/movies/minority-report.png" class="minority-report movie"
+                    alt="Affiche du film Minority Report">
+                <img class="alien-covenant movie" src="./ressources/movies/alien-covenant.jpeg"
+                    alt="Affiche du film Alien Covenant">
             </div>
         </section>
         <section class="movies-to-find third-section">
@@ -87,9 +113,41 @@
                 <img src="#" alt="">
                 <img src="#" alt="">
             </div>
+        </section>
     </div>
-    </section>
+    <div class="play-container">
+        <div class="half-screen-container">
+            <img href="" class="image-clicked" alt="Image d'un film">
+        </div>
+        <div class="half-screen-lower">
+            <div class="user-answer-container">
+                <label for="user-input" id="user-input-label">VOTRE PROPOSITION:</label>
 
+                <input type="text" name="user-input" id="user-input" required>
+                <div class="checker">
+                    <input type="reset" id="cancel" value="Effacer">
+                    <input type="submit" id="submit" value="Valider">
+                </div>
+            </div>
+            <section class="movies-to-find">
+                <h3>Les Films - A trouver</h3>
+                <div class="images-container">
+                    <img src="#" alt="">
+                    <img src="#" alt="">
+                    <img src="#" alt="">
+                </div>
+            </section>
+            <section class="movies-to-find">
+                <h3>Les Films - A trouver</h3>
+                <div class="images-container">
+                    <img src="#" alt="">
+                    <img src="#" alt="">
+                    <img src="#" alt="">
+                </div>
+            </section>
+        </div>
+    </div>
+    </div>
 
 </body>
 

@@ -1,0 +1,64 @@
+.first-section {
+    margin-top: -21px;
+
+    .images-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+        .movie {
+            filter: grayscale(100%);
+            width: 28vw;
+            height: 35vh;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        // .gladiator {
+        //     background-image: url(./ressources/movies/gladiator.webp);
+        // }
+
+        .schindler {
+            background-image: url(./ressources/movies/la-liste-de-schindler.jpg);
+        }
+
+        .dreamcatcher {
+            background-image: url(./ressources/movies/dreamcatcher.jpg);
+        }
+    }
+}
+
+.second-section {
+
+    .images-container {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+        .movie {
+            filter: grayscale(100%);
+            width: 28vw;
+            height: 35vh;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .hot-shots {
+            background-image: url(./ressources/movies/hotshot.jpg);
+        }
+
+        .minority-report {
+            background-image: url(./ressources/movies/minority-report.png);
+        }
+
+        .alien-covenant {
+            background-image: url(./ressources/movies/alien-covenant.jpeg);
+        }
+    }
+
+}
