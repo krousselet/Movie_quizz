@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script defer src="./app.js"></script>
+    <title>Movie Quizz</title>
+</head>
+
+<body>
+    <!-- <div class="loader-container">
+        <div class="curtain">
+            <div class="logo-container">
+                <img class="logo" src="./ressources/logo_moviequiz.png" alt="Image d'un logo">
+                <img src="./ressources/sos.svg" alt="Logo sos fantômes" class="sos">
+                <img src="./ressources/apes-window.svg" alt="logo la planète des singes" class="apes-window">
+                <img src="./ressources/top-gun.svg" alt="logo top-gun" class="top-gun">
+            </div>
+            <div class="curtain-left"></div>
+            <div class="curtain-right"></div>
+        </div>
+    </div> -->
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img class="logo-image" src="./ressources/logo-mini.svg" alt="Logo Movie-quizz">
+            </div>
+            <div class="details-hamburger-container">
+                <div class="details"></div>
+                <div class="hamburger">
+                    <div class="upper"></div>
+                    <div class="middle"></div>
+                    <div class="lower"></div>
+                </div>
+
+            </div>
+            <div class="details-desktop-menu">
+                <div class="logo-image-desktop-container">
+                    <img class="logo-image-desktop" src="./ressources/logo_moviequiz.png" alt="Logo Movie-quizz">
+                </div>
+                <a href="#" class="accueil-desktop">Accueil</a>
+                <a href="#" class="series-desktop">Séries</a>
+                <a href="#" class="movies-desktop">Films</a>
+                <a href="#" class="all">Tous les films et séries</a>
+                <div class="how-to-play">Comment jouer</div>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <a href="#" class="accueil">Accueil</a>
+            <a href="#" class="series">Séries</a>
+            <a href="#" class="movies">Films</a>
+            <a href="#" class="all">Tous les films et séries</a>
+        </div>
+        <div class="rules">
+            <p>Voici les règles du jeu :</p><br>
+            <p>Vous choisissez une image sur laquelle clicker, pour en trouver le titre.</p>
+            <p>Si vous n'y parvenez pas, vous trouverez un message vous invitant à réessayer sous quelques secondes.</p>
+            <p>En revanche, si vous y parvenez, vous aurez un message de félicitations, ainsi qu'un accès aux détails du
+                film via la page d'accueil.</p>
+            <p>J'espère que vous allez vous amuserer !</p>
+        </div>
+    </header>
+    <div class="upper-screen-home">
+        <div id="main-title-container">
+            <h3 id="main-title">MOVIE QUIZZ !</h3>
+        </div>
+    </div>
+    <div class="upper-screen-play">
+        <div id="image-clicked-container">
+            <img src="#" alt="" id="image-clicked">
+        </div>
+        <div class="answer-verification">
+            <div class="proposition-container">
+                <label for="proposition">Votre proposition :</label>
+                <input required type="text" name="proposition" id="proposition-input"
+                    placeholder="Votre proposition...">
+            </div>
+            <div class="answer-verification-pannel">
+                <div id="cancel">Annuler</div>
+                <div id="validate">Valider</div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <img class="swiper-slide swiper-slide-movie" src="">
+            <img class="swiper-slide swiper-slide-movie" src="">
+            <img class="swiper-slide swiper-slide-movie" src="">
+            <img class="swiper-slide swiper-slide-movie" src="">
+            <img class="swiper-slide swiper-slide-movie" src="">
+            <img class="swiper-slide swiper-slide-movie" src="">
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <div class="swiper-container"></div>
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <img class="swiper-slide swiper-slide-serie" src="">
+            <img class="swiper-slide swiper-slide-serie" src="">
+            <img class="swiper-slide swiper-slide-serie" src="">
+            <img class="swiper-slide swiper-slide-serie" src="">
+            <img class="swiper-slide swiper-slide-serie" src="">
+            <img class="swiper-slide swiper-slide-serie" src="">
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- <div class="swiper">
+        
+        <div class="swiper-wrapper">
+            
+            <img class="swiper-slide" src="">
+            <img class="swiper-slide" src="">
+            <img class="swiper-slide" src="">
+            <img class="swiper-slide" src="">
+            <img class="swiper-slide" src="">
+            <img class="swiper-slide" src="">
+        </div>
+        
+        <div class="swiper-pagination"></div>
+
+       
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        
+        <div class="swiper-scrollbar"></div>
+    </div> -->
+    <div class="swiper">
+
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <img class="swiper-slide" src="">
+            <img class="swiper-slide" src="">
+            <img class="swiper-slide" src="">
+            <img class="swiper-slide" src="">
+            <img class="swiper-slide" src="">
+            <img class="swiper-slide" src="">
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script defer>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 3,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+</body>
+
+</html>

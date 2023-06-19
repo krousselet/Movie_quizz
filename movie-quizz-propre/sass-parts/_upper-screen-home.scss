@@ -1,0 +1,15 @@
+.upper-screen-home-inactive {
+    display: none;
+}
+
+.upper-screen-home {
+    min-height: 45vh;
+    min-width: 100vw;
+
+    #main-title-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25%;
+    }
+}

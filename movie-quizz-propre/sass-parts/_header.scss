@@ -1,0 +1,187 @@
+header {
+    // position: absolute;
+    display: flex;
+    min-width: 100vw;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+
+    nav {
+        min-width: 100vw;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            margin-left: 15px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .logo-image {
+                @media (width > 799px) and (width < 2047px) {
+                    display: none;
+                }
+            }
+
+            .logo-image-desktop-container {
+                display: none;
+
+                @media (width > 799px) and (width < 2047px) {
+                    display: flex;
+                    width: 130px;
+                    height: 31px;
+                    margin-right: 100px;
+                }
+
+                .logo-image-desktop {
+                    width: 130px;
+                    height: 60px;
+                }
+            }
+        }
+
+        .details-hamburger-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .details-desktop-menu {
+            display: none;
+
+            @media (width > 799px) and (width < 2048px) {
+                width: 100vw;
+                position: relative;
+                left: 75px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-left: 0;
+
+            }
+        }
+
+
+        .details {
+            width: 50px;
+            height: 50px;
+            background: url(./ressources/nav.svg) center center no-repeat;
+            cursor: pointer;
+        }
+
+        .hamburger {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            margin-right: 15px;
+            cursor: pointer;
+
+            @media (width > 799px) and (width < 2049px) {
+                display: none;
+            }
+
+            .upper {
+                width: 25px;
+                height: 1px;
+                position: absolute;
+                top: 33%;
+                background-color: white;
+                transition: .5s ease;
+            }
+
+            .upper-active {
+                top: 50%;
+                transform: rotate(45deg);
+                transition: .5s ease;
+            }
+
+            .middle {
+                width: 25px;
+                height: 1px;
+                position: absolute;
+                top: 50%;
+                background-color: white;
+                transition: all .5s ease;
+            }
+
+            .middle-active {
+                opacity: 0;
+                width: 0;
+                transition: all .5s ease;
+            }
+
+            .lower {
+                width: 25px;
+                height: 1px;
+                position: absolute;
+                top: 66%;
+                background-color: white;
+                transition: .5s ease;
+            }
+
+            .lower-active {
+                top: 50%;
+                transform: rotate(-45deg);
+                transition: .5s ease;
+            }
+        }
+    }
+
+    .mobile-menu {
+        display: none;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 100px;
+    }
+
+    .mobile-menu-active {
+        position: absolute;
+        min-width: 50vw;
+        min-height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        align-items: flex-end;
+        right: 25px;
+        top: 100px;
+        z-index: 10;
+
+        a {
+            padding-bottom: 25px;
+        }
+    }
+
+    .rules {
+        display: none;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 100px;
+
+    }
+
+    .rules-active {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        min-width: 50vw;
+        min-height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        left: 25px;
+        top: 100px;
+        z-index: 10;
+    }
+}

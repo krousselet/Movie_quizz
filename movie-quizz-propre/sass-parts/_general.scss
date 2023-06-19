@@ -1,0 +1,29 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+label {
+    color: white;
+}
+
+input {
+    color: black;
+}
